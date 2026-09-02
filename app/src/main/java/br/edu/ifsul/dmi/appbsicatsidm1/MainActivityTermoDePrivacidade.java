@@ -1,6 +1,7 @@
 package br.edu.ifsul.dmi.appbsicatsidm1;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
@@ -54,7 +55,11 @@ public class MainActivityTermoDePrivacidade extends AppCompatActivity {
         btAceitar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // aqui voçês vão abrir para a outra tela! (exercício 2)
+                Intent it = new Intent(
+                        getApplicationContext(),
+                        MainActivityCriarUsuario.class
+                );
+                startActivity(it);
             }
         });
     }
